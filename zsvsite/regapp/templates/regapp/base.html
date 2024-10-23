@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+    <title>{% block title %}
+
+        {% endblock title %}</title>
+</head>
+<body>
+    {% block body %}
+
+    {% endblock %}
+    <br>
+<div>
+    <a href="{% url 'regapp:registration' %}">
+        Registration
+    </a>
+    <br>
+    <br>
+    <a href="{% url 'regapp:login' %}">
+        Login
+    </a>
+</div>
+</body>
+</html>

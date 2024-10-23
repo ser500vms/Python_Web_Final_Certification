@@ -1,0 +1,14 @@
+{% extends "regapp/base.html" %}
+
+{% block title %}Личный кабинет{% endblock title %}
+
+{% block body %}
+    <h1>Добро пожаловать {{ user.username }}</h1>
+
+    <form action="{% url 'regapp:logout' %}" method="post">
+<!--для logout обязательно нужно использовать csrf_token и POST запрос-->
+        {% csrf_token %}
+        <button type="submit">Выход</button>
+    </form>
+
+{% endblock  %}
